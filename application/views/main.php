@@ -18,13 +18,13 @@
  ?>
 
  <?php 
- 	if(isset($book)&&!isset('nodata')){
+ 	if(isset($book)){
  		echo "<p>Znaleziono ".count($book)." pozycje:</p>";
  		foreach($book as $element){
  			echo $element;
  		}
  	}
- 	else{
+ 	else if(isset($nodata)){
  		echo "<p>Nie znaleziono żadnych elementów o podanych kryteriach</p>";
  	}
 

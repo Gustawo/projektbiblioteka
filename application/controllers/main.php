@@ -23,7 +23,7 @@ class Main extends CI_Controller {
 	public function find(){
 		$name = $this->input->post('tytul');
 		$data=$this->books->search_By_Name($name);
-		if(!empty($data)){
+		if($data->result()){
 			$viewBag = array();
 			foreach ($data->result() as $row)
 			{
