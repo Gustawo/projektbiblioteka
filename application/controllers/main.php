@@ -35,6 +35,9 @@ class Main extends CI_Controller {
 
 			}
 		}
+		else {
+			$viewBag['nodata']=true;
+		}
 		$this->load->view('main',$viewBag);
 	}
 
